@@ -2,6 +2,35 @@
 C++ code ilustration for CRUD (Create, Read, Update, Delete) with MySQL database.
 
 
+## System Requirements
+
+Linux platform with installed g++ and MySQL for database testing. For Debian/Ubuntu, you can install mysql-server and mysql-client.
+
+	$ sudo apt-get install mysql-server mysql-client
+
+You also need MySQL Development library, libmysqlcppconn-dev.
+
+	$ sudo apt-get install libmysqlcppconn-dev
+
+## Database
+
+For database testing, you can run database.sql script to execute database and table.
+
+## Compiling & Linking
+
+Before compiling, please change database configured based on your MySQL configuration. To build demo-create-data.cpp, you do the following command. 
+
+	$ g++ -c -I/usr/include/cppconn demo-create-data.cpp 
+	$ g++ -o demo-create-data demo-create-data.o -L/usr/lib/mysql -lmysqlcppconn
+
+
+You can compile use make.
+
+    $ cd src/
+    $ make
+  
+
+
 
 ## License
 
